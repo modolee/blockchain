@@ -82,8 +82,7 @@
 * 네임 코인
 * 메타 코인
 * 마스터 코인
-<img src="./img/colored_coin.png" width=70%>
-
+![Alt text](./img/colored_coin.png)
 => **트랜잭션에 잔액 뿐만 아니라 다른 데이터를 넣을 수 있는 공간을 마련**
 ##### 4. 블록체인 해석 불가 (Blockchain-blindness) - 잘 이해 안됨
 비트코인의 UTXO에서는 블록체인 내에서 랜덤성을 띄고 있는 값들(논스, 이전 블록의 해시, 타임스탬프)을 불러서 사용할 수 없다. 그래서 랜덤성을 요구하는 도박과 같은 어플리케이션을 만드는게 한계가 있다.
@@ -94,10 +93,37 @@
 #### 어카운트
 ##### 어카운트란?
 => ~~가치 불투명성의 해결책~~ **UTXO의 비효율성 해결**
-##### 비트코인의 UTXO
+* 모든 트랜잭션의 실행 주체이자 기본 단위로서 모든 것은 어카운트에서 시작한다.
+* 이더리움 내의 화폐 단위 ETH(이더) 잔액을 가지고 있다.
+* 스마트 컨트랙트 코드를 포함하고 있다.
+* 어카운트 정보
+    * **넌스(nonce)** : 해당 어카운트로부터 보내진 트랜잭션의 수, 0으로 시작한다. 트랜잭션을 오직 한 번만 실행되게 할 때 사용하는 카운터.
+    * **잔액(balance)** : 어카운트의 이더 잔고
+    * **루트(root)** : 해당 어카운트가 저장 될 머클 패트리시아 트리의 루트 노드
+    * **코드해시(codehash)** : 스마트 컨트랙트 바이트 코드의 해시
+##### 비트코인과의 비교
+* 잔액 확인
+![Alt text](./img/balance_btc_vs_eth.png)
+* 화폐 전송
+![Alt text](./img/transfer_btc_vs_eth.png)
+
 ##### EOA(Externally Owned Account)
-실행 코드를 포함하고 있지 않다.
+* Etherscan에서 EOA 표시 : https://ropsten.etherscan.io/address/0x00f5b4e383a75dfe334e1af45ce8324b2ac0da8f
+* 일반적인 이더리움 사용자 어카운트
+* 사람이 직접 개인키(Private Key)를 관리하며, 스마트 컨트랙트 코드를 가지고 있지 않다.
+* 개인키로 서명한 트랜잭션을 생성하여 다른 EOA나 CA에게 메세지를 보낼 수 있다.
+* 보통 EOA 간의 메세지는 이더를 전송하는 것이고, CA에게 보내는 메세지는 스마트 컨트랙트를 실행하는 것이다.
+
 ##### CA (Contract Account)
+* Etherscan에서 CA 표시 : https://ropsten.etherscan.io/address/0x3c4096abd295430ac68ab3ab5f03c0c17b777ea9#code
+* 일반적으로 부르는 스마트 컨트랙트의 정식 용어가 컨트랙트 어카운트이다.
+* EOA나 다른 CA의 메세지를 받은 후 내부의 스마트 컨트랙트 코드를 실행한 후, 새로운 컨트랙트를 생성하거나 다른 메세지를 읽거나 보낸다.
+* 필요하면 내부 저장 공간에 **데이터를 저장**할 수도 있다.
+* EOA나 다른 CA에 의해서만 작동하고, 직접 새로운 트랜잭션을 실행할 수는 없다.
+
+![Account_with_transaction](http://best-trading.eu/wp-content/uploads/2017/07/Ethereum-7.png)
+
+(출처 : http://best-trading.eu/how-does-ethereum-work/)
 
 #### 메세지와 트랜잭션
 ##### 비트코인의 트랜잭션
@@ -119,6 +145,15 @@
 * LLL(Low Level OPCODE)
 ##### EVM(Ethereum Virtual Machine)
 
-#### 블럭체인과 채굴
+#### 블록체인과 채굴
 ##### Etash
 : ASIC 사용 불가
+
+
+#### 참고자료
+* 코어 이더리움 프로그래밍 - 박재현,오재훈, 박혜영 지음 : http://www.yes24.com/24/Goods/59621522
+* 스팀잇 어미새님 : https://steemit.com/@yahweh87
+* 나무 위키 : https://namu.wiki/w/Ethereum
+* 한승환님 블로그 : http://www.seunghwanhan.com/2015/06/ethereum-introduction_3.html
+* 이더리움 가스 개념 설명 : https://steemit.com/kr/@jinkim/gas-gas-limit-block-gas-limit-gas-price-total-fee
+* 이더리움 공식 깃허브 : https://github.com/ethereum/wiki/wiki/Design-Rationale
