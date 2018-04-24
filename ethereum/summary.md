@@ -158,6 +158,7 @@
 ##### EVM(Ethereum Virtual Machine)
 * 프로그래밍 언어로 작성 된 코드가 플랫폼에 상관없이 작동할 수 있도록 통역해 주는 역할
 ![EVM](https://steemitimages.com/DQmPFZUdMXLpzyAAUK5bYrYC7u4ZVEYcci5d1zWmPsMz2Ka/image.png)
+
 (출처 : https://opentutorials.org/course/2869/18360)
 
 #### 블록체인과 채굴
