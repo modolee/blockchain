@@ -126,24 +126,37 @@
 (출처 : http://best-trading.eu/how-does-ethereum-work/)
 
 #### 메세지와 트랜잭션
-##### 비트코인의 트랜잭션
 ##### 트랜잭션
-##### 메세지
-프라이빗키로 서명되어 있지 않다.
+* EOA의 개인키로 서명된 메세지 패키지
+* 구성 요소
+    * AccountNonce : 발신자가 보낸 트랜잭션의 개수를 의미하며, 0으로 시작한다.
+    * **Price** : 수수료로 지급할 Gas 가격 (Wei)
+    * **GasLimit** : 최대 Gas 사용 범위
+    * Recipient : 수신처의 주소
+    * Amount : 전송할 이더의 양 (Wei)
+    * **Payload** : 옵션 필드로 스마트 컨트랙트 호출 시 필요한 매개변수를 저장할 수 있다. => **Lack of state 해결**
+    * V,R,S : 서명에 필요한 값들
+##### 메세지 (or 내부 트랜잭션)
+* CA가 다른 CA에서 보내는 트랜잭션
+* CA가 보내기 때문에 서명이 되어 있지 않다.
 
 #### 상태 변환 함수
-=> 상태의 단순성, 블록체인 해석 불가의 해결
+* 상태 변환 시 오류가 없는 지 체크하고 오류가 없을 경우 해당 상태로 변환시킨다.
 ##### 비트코인의 상태 변환
-##### 일반 트랜잭션
-##### 스마트 컨트랙트 트랜잭션
+![bitcoin_state](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/statetransition.png)
+* UTXO의 생성, 제거로 표현
+##### 이더리움 상태 변환
+![ethereum_state](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/ethertransition.png)
+* 어카운트의 상태 변화로 표현
 
 #### 코드 실행
 ##### 프로그래밍 언어
-=> 튜링 불완전성 해결
+=> **튜링 불완전성 해결**
 * Solidity
 * Serpent
 * LLL(Low Level OPCODE)
 ##### EVM(Ethereum Virtual Machine)
+* 프로그래밍 언어로 작성 된 코드가 플랫폼에 상관없이 작동할 수 있도록 통역해 주는 역할
 
 #### 블록체인과 채굴
 ##### Etash
