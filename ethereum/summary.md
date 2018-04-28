@@ -156,20 +156,32 @@
 * Serpent
 * LLL(Low Level OPCODE)
 ##### EVM(Ethereum Virtual Machine)
-* 프로그래밍 언어로 작성 된 코드가 플랫폼에 상관없이 작동할 수 있도록 통역해 주는 역할
+* 프로그래밍 언어로 작성 된 코드가 [플랫폼(윈도우, 리눅스, 맥)에 상관없이 작동](https://geth.ethereum.org/downloads/)할 수 있도록 통역해 주는 역할
 ![EVM](https://steemitimages.com/DQmPFZUdMXLpzyAAUK5bYrYC7u4ZVEYcci5d1zWmPsMz2Ka/image.png)
 
 (출처 : https://opentutorials.org/course/2869/18360)
+##### 코드 실행의 물리적 위치
+* 블록을 전파받고 검증하는 모든 노드들에서 동일하게 실행되어, 동일한 상태를 유지할 수 있게 한다.
 
 #### 블록체인과 채굴
-##### 블록
+##### 블록 구조
 * 비트코인 블록
-https://blockchain.info/en/block-height/519926
+   * https://blockchain.info/en/block-height/519926
+![bitcoin_block_structure](https://i.stack.imgur.com/HrKX0.png)
+
+(출처 : https://ethereum.stackexchange.com/questions/2286/what-diagrams-exist-to-illustrate-the-ethereum-blockchain-creation-process)
 * 이더리움 블록
-https://etherscan.io/block/5509375 (엉클 블록 포함)
-https://etherscan.io/block/5509378 (엉클 블록 미포함)
-![ethereum_block](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/apply_block_diagram.png)
-##### Etash
+   * https://etherscan.io/block/5509375 (엉클 블록 포함)
+   * https://etherscan.io/block/5509378 (엉클 블록 미포함)
+![ethereum_block_structure](https://i.stack.imgur.com/eOwjD.png)
+
+(출처 : https://ethereum.stackexchange.com/questions/2286/what-diagrams-exist-to-illustrate-the-ethereum-blockchain-creation-process)
+##### 블록 검증 알고리즘
+![ethereum_state_validation](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/apply_block_diagram.png)
+##### 채굴
+* 합의 알고리즘
+: 작업증명(PoW, Proof of Work) -> 지분증명(PoS, Proof of Stake, [Casper](http://eips.ethereum.org/EIPS/eip-1011))로 변환 준비 중
+* Etash
 : ASIC 사용 불가
 
 #### 수수료(Gas)
