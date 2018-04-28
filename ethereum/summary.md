@@ -206,9 +206,12 @@
 * 이전 블록 마지막 상태에서 시작해서 모든 트랜잭션을 수행 한 후의 상태가 현재 블록에 기록 된 상태와 같은지 검증
 ##### 채굴
 * 합의 알고리즘
-: 작업증명(PoW, Proof of Work) -> 지분증명(PoS, Proof of Stake, [Casper](http://eips.ethereum.org/EIPS/eip-1011))로 변환 준비 중
-* Etash
-: ASIC 사용 불가
+   * 작업증명(PoW, Proof of Work)
+   * 순차적으로 지분증명(PoS, Proof of Stake)으로 변환할 예정. [Casper](http://eips.ethereum.org/EIPS/eip-1011)
+* Etash - Anti-ASIC 작업증명
+   * SHA256 해시만 수행하면 됐던 비트코인과 다르게, 범용적인 명령어들을 수행해야 됨
+   * CPU 뿐만 아니라 수 GB에 해당하는 메모리를 사용해야 함
+   * ASIC(Application Specific Integrated Circuit, 주문형 반도체) 사용이 어렵게 만들었으나, [비트메인에서 출시해서 7월 배송 예정](https://blockinpress.com/archives/4115)
 
 #### 수수료(Gas)
 ##### 트랜잭션
