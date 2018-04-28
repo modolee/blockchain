@@ -166,18 +166,44 @@
 #### 블록체인과 채굴
 ##### 블록 구조
 * 비트코인 블록
-   * https://blockchain.info/en/block-height/519926
+   * 구성
+      * 이전 블록헤더 해시
+      * 타임스탬프
+      * 트랜잭션 머클트리 루트
+      * 논스
+   * 예시
+      * https://blockchain.info/en/block-height/519926
 ![bitcoin_block_structure](https://i.stack.imgur.com/HrKX0.png)
 
 (출처 : https://ethereum.stackexchange.com/questions/2286/what-diagrams-exist-to-illustrate-the-ethereum-blockchain-creation-process)
+
 * 이더리움 블록
-   * https://etherscan.io/block/5509375 (엉클 블록 포함)
-   * https://etherscan.io/block/5509378 (엉클 블록 미포함)
+   * 비트코인과의 차이점
+      * 트랜잭션 리스트
+      * 가장 최근 상태의 복사본
+      * 블록 넘버
+      * 난이도 (비트코인에도 bits가 있는데 왜??)
+   * 예시
+      * https://etherscan.io/block/5509375 (엉클 블록 포함)
+      * https://etherscan.io/block/5509378 (엉클 블록 미포함)
 ![ethereum_block_structure](https://i.stack.imgur.com/eOwjD.png)
 
 (출처 : https://ethereum.stackexchange.com/questions/2286/what-diagrams-exist-to-illustrate-the-ethereum-blockchain-creation-process)
+##### 어카운트 상태 저장 - 머클 패트리시아 트리
+* 블록에 연결되어 있는 트리 종류
+   * 트랜잭션 머클 트리 루트 (불변)
+   * 리시트(트랜잭션 수행 결과) 머클 트리 루트 (불변)
+   * 상태 머클 패트리시아 트리 루트 (가변)
+* 수시로 변경 되는 상태(어카운트 잔액 및 컨트랙트 데이터)를 효율적으로 저장하기 위한 자료구조
+* 변경 된 부분만 새로 저장하고 나머지는 그냥 이전 데이터의 주소로 연결한다.
+![merkle_patricia_tree](https://blog.ethereum.org/wp-content/uploads/2015/11/ethblockchain_full.png)
+
+(출처 : https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)
 ##### 블록 검증 알고리즘
 ![ethereum_state_validation](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/apply_block_diagram.png)
+* 기본적으로 블록 생성 시 수행하는 트랜잭션 자체에 대한 검증 수행
+* 트랜잭션을 전체 다 수행 할 때 소모된 총 Gas가 블록의 GasLimit을 초과하지 않는 지 검증
+* 이전 블록 마지막 상태에서 시작해서 모든 트랜잭션을 수행 한 후의 상태가 현재 블록에 기록 된 상태와 같은지 검증
 ##### 채굴
 * 합의 알고리즘
 : 작업증명(PoW, Proof of Work) -> 지분증명(PoS, Proof of Stake, [Casper](http://eips.ethereum.org/EIPS/eip-1011))로 변환 준비 중
@@ -205,3 +231,4 @@
 * 이더리움 공식 깃허브 : https://github.com/ethereum/wiki/wiki/Design-Rationale
 * 이더리움 공식 블로그 - State Tree Pruning : https://blog.ethereum.org/2015/06/26/state-tree-pruning/
 * 이더리움 공식 블로그 - Merkling in Ethereum : https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/
+* mark wil cox 블로그 : http://markwilcox.com/articles/01/
