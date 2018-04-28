@@ -212,10 +212,24 @@
 
 #### 수수료(Gas)
 ##### 트랜잭션
-* Price
-* GasLimit
+* Price : Gas 당 트랜잭션 요청자가 지급할 금액
+* GasLimit : 트랜잭션 수행에 소비될 총 가스 예상량 (무한 루프 방지)
+* 기본 개념
+![gas_basic](./img/gas_basic.png)
+* 트랜잭션 성공 시
+![gas_success](./img/gas_success.png)
+https://ropsten.etherscan.io/tx/0x2d1adffaea2fd77d99cbf07880441a3b6caaa3de5420012fd5b0a4a9c914bd84
+* 트랜잭션 실패 시
+![gas_fail](./img/gas_fail.png)
+https://ropsten.etherscan.io/tx/0xf188425dd5dee1de1e9a637da2c05a3fa74284e477e8f31b52527abccbc8c99a
+* 어떻게 Gas Price, Limit을 결정해야 하는가?
+   * https://ethgasstation.info/ 참고해서 결정
+   * ICO 같은 경우 권장 사항을 알려줌
 ##### 블록
-* GasLimit
+* GasLimit : 블록에 담을 수 있는 트랜잭션 GasLimit의 총 합 (2018.4.27 기준 7,996,549 Gas)
+* 담을 수 있는 트랜잭션 개수 : 그때 그때 다름 https://etherscan.io/block/5520289
+* 어떤 기준으로 트랜잭션을 담는가 : 수수료를 많이 받는 방향으로
+![block_gas_limit](./img/block_gas_limit.png)
 
 # 한 눈에 보는 이더리움 구조
 ![ethereum_big_picture](https://github.com/4c656554/BlockchainIllustrations/blob/master/Ethereum/EthBlockchain5.png?raw=true)
@@ -232,3 +246,4 @@
 * 이더리움 공식 블로그 - State Tree Pruning : https://blog.ethereum.org/2015/06/26/state-tree-pruning/
 * 이더리움 공식 블로그 - Merkling in Ethereum : https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/
 * mark wil cox 블로그 : http://markwilcox.com/articles/01/
+* etherchain.org - 블록 Gas Limit : https://www.etherchain.org/charts/blockGasLimit
