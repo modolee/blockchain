@@ -77,7 +77,7 @@
 ##### 3. 상태의 단순성(Lack of state)
 비트코인은 애초에 지불 수단으로 개발되었기 때문에, 비트코인을 주고 받는 용도로 밖에 사용할 수 없다. 다른 데이터를 넣을 수 없다. 그리고 UTXO는 *사용되었다/사용되지 않았다* 라는 두 가지 상태 밖에 표현할 수 없다.
 ###### 상태를 다양하게 하려던 시도
-비트코인의 에 메타 데이터를 넣어서 다른 가치들을 저장하려고 시도
+비트코인의 트랜잭션에 메타 데이터를 넣어서 다른 가치들을 저장하려고 시도
 * 컬러드 코인 - [소개영상](https://www.youtube.com/watch?v=fmFjmvwPGKU)
 * 네임 코인
 * 메타 코인
@@ -85,7 +85,7 @@
 ![Alt text](./img/colored_coin.png)
 => **트랜잭션에 잔액 뿐만 아니라 다른 데이터를 넣을 수 있는 공간을 마련**
 ##### 4. 블록체인 해석 불가 (Blockchain-blindness) - 잘 이해 안됨
-비트코인의 트랜잭션에서는 블록체인 내에서 랜덤성을 띄고 있는 값들(논스, 이전 블록의 해시, 타임스탬프)을 불러서 사용할 수 없다. 그래서 랜덤성을 요구하는 도박과 같은 어플리케이션을 만드는게 한계가 있다.
+비트코인의 트랜잭션에서는 블록체인 내에서 랜덤성을 띄고 있는 값들(논스, 이전 블록의 해시, 타임스탬프)을 불러서 사용할 수 없다. 그래서 비트코인은 지급 결제 기능 외의 랜덤성을 요구하는 도박과 같은 어플리케이션을 만드는게 한계가 있다.
 => **결국엔 Lack of State와 같은 말이 아닐까?**
 
 ### 이더리움의 특징들
@@ -162,9 +162,22 @@
 (출처 : https://opentutorials.org/course/2869/18360)
 
 #### 블록체인과 채굴
+##### 블록
+* 비트코인 블록
+https://blockchain.info/en/block-height/519926
+* 이더리움 블록
+https://etherscan.io/block/5509375 (엉클 블록 포함)
+https://etherscan.io/block/5509378 (엉클 블록 미포함)
+![ethereum_block](https://raw.githubusercontent.com/ethereumbuilders/GitBook/master/en/vitalik-diagrams/apply_block_diagram.png)
 ##### Etash
 : ASIC 사용 불가
 
+#### 수수료(Gas)
+##### 트랜잭션
+* Price
+* GasLimit
+##### 블록
+* GasLimit
 
 #### 참고자료
 * 코어 이더리움 프로그래밍 - 박재현,오재훈, 박혜영 지음 : http://www.yes24.com/24/Goods/59621522
