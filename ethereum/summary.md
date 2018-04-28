@@ -191,6 +191,11 @@
 ##### 블록
 * GasLimit
 
+# 한 눈에 보는 이더리움 구조
+![ethereum_big_picture](https://github.com/4c656554/BlockchainIllustrations/blob/master/Ethereum/EthBlockchain5.png?raw=true)
+
+(출처 : https://github.com/4c656554/BlockchainIllustrations/)
+
 #### 참고자료
 * 코어 이더리움 프로그래밍 - 박재현,오재훈, 박혜영 지음 : http://www.yes24.com/24/Goods/59621522
 * 스팀잇 어미새님 : https://steemit.com/@yahweh87
@@ -198,3 +203,5 @@
 * 한승환님 블로그 : http://www.seunghwanhan.com/2015/06/ethereum-introduction_3.html
 * 이더리움 가스 개념 설명 : https://steemit.com/kr/@jinkim/gas-gas-limit-block-gas-limit-gas-price-total-fee
 * 이더리움 공식 깃허브 : https://github.com/ethereum/wiki/wiki/Design-Rationale
+* 이더리움 공식 블로그 - State Tree Pruning : https://blog.ethereum.org/2015/06/26/state-tree-pruning/
+* 이더리움 공식 블로그 - Merkling in Ethereum : https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/
