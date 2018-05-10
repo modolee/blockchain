@@ -86,7 +86,10 @@
 => **트랜잭션에 잔액 뿐만 아니라 다른 데이터를 넣을 수 있는 공간을 마련**
 ##### 4. 블록체인 해석 불가 (Blockchain-blindness)
 비트코인의 트랜잭션에서는 블록체인 내에서 랜덤성을 띄고 있는 값들(논스, 이전 블록의 해시, 타임스탬프)을 불러서 사용할 수 없다. 그래서 비트코인은 지급 결제 기능 외의 랜덤성을 요구하는 도박과 같은 어플리케이션을 만드는게 한계가 있다. 비트코인 스크립트의 한계
+
 => **World States 개념을 도입하고, 블록의 상태를 읽어 올 수 있는 명령어 등을 제공**
+
+=> **Solidity에서 Block과 Transaction의 정보를 가져올 수 있는 [함수](http://solidity.readthedocs.io/en/develop/units-and-global-variables.html?special-variables-and-functions#special-variables-and-functions)를 제공한다.**
 
 ### 이더리움의 특징들
 
