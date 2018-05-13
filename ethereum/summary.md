@@ -211,7 +211,9 @@
 ##### 채굴
 * 합의 알고리즘
    * 작업증명(PoW, Proof of Work)
-   * 순차적으로 지분증명(PoS, Proof of Stake)으로 변환할 예정. [Casper](http://eips.ethereum.org/EIPS/eip-1011)
+   * 순차적으로 지분증명(PoS, Proof of Stake)으로 변환할 예정. 
+   * [Casper](http://eips.ethereum.org/EIPS/eip-1011)
+   * [이더리움 지분증명 알고리듬 ‘캐스퍼’ 곧 테스트넷 가동 - 코인데스크 코리아](https://www.coindeskkorea.com/%EC%83%88%EB%A1%9C-%EB%B0%94%EB%80%8C%EB%8A%94-%EC%9D%B4%EB%8D%94%EB%A6%AC%EC%9B%80-%ED%95%A9%EC%9D%98-%EC%95%8C%EA%B3%A0%EB%A6%AC%EB%93%AC%EC%9D%98-%EA%B2%BD%EC%A0%9C%ED%95%99/)
 * Etash - Anti-ASIC 작업증명
    * SHA256 해시만 수행하면 됐던 비트코인과 다르게, 범용적인 명령어들을 수행해야 됨
    * CPU 뿐만 아니라 수 GB에 해당하는 메모리를 사용해야 함
