@@ -239,6 +239,7 @@ https://ropsten.etherscan.io/tx/0xf188425dd5dee1de1e9a637da2c05a3fa74284e477e8f3
 * 담을 수 있는 트랜잭션 개수 : 그때 그때 다름 https://etherscan.io/block/5520289
 * 어떤 기준으로 트랜잭션을 담는가 : 수수료를 많이 받는 방향으로
 ![block_gas_limit](./img/block_gas_limit.png)
+- **거래#1에서 최소 값을 21,000 -> 84,000으로 변경해야 됨**
 
 # 한 눈에 보는 이더리움 구조
 ![ethereum_big_picture](https://github.com/4c656554/BlockchainIllustrations/blob/master/Ethereum/EthBlockchain5.png?raw=true)
