@@ -24,6 +24,7 @@
 * 2013년 이더리움 백서 작성
 * 2014년 월드 테크놀로지 어워드 IT 소프트웨어 부문 수상 (페이스북의 마크 저커버그도 함께 후보에 있었음)
 * 2015년 7월 30일 이더리움 메인넷 런칭
+* ~~[댄싱머신 비탈릭 - EDCON 2018](https://www.youtube.com/watch?v=kUheuFDHSvI)~~
 
 (출처 : [위키피디아](https://ko.wikipedia.org/wiki/%EB%B9%84%ED%83%88%EB%A6%AD_%EB%B6%80%ED%85%8C%EB%A6%B0), [한국경제 신문](http://news.hankyung.com/article/2014121540821))
 
