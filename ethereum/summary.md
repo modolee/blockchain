@@ -231,6 +231,7 @@ https://ropsten.etherscan.io/tx/0x2d1adffaea2fd77d99cbf07880441a3b6caaa3de542001
 * 트랜잭션 실패 시
 ![gas_fail](./img/gas_fail.png)
 https://ropsten.etherscan.io/tx/0xf188425dd5dee1de1e9a637da2c05a3fa74284e477e8f31b52527abccbc8c99a
+-> **수정 필요** 첫번째 컨트랙트 실행 후 29,000이 남아야 
 * 어떻게 Gas Price, Limit을 결정해야 하는가?
    * https://ethgasstation.info/ 참고해서 결정
    * ICO 같은 경우 권장 사항을 알려줌
