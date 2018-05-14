@@ -231,7 +231,6 @@ https://ropsten.etherscan.io/tx/0x2d1adffaea2fd77d99cbf07880441a3b6caaa3de542001
 * 트랜잭션 실패 시
 ![gas_fail](./img/gas_fail.png)
 https://ropsten.etherscan.io/tx/0xf188425dd5dee1de1e9a637da2c05a3fa74284e477e8f31b52527abccbc8c99a
--> **수정 필요** 첫번째 컨트랙트 실행 후 29,000이 남아야 
 * 어떻게 Gas Price, Limit을 결정해야 하는가?
    * https://ethgasstation.info/ 참고해서 결정
    * ICO 같은 경우 권장 사항을 알려줌
@@ -240,7 +239,6 @@ https://ropsten.etherscan.io/tx/0xf188425dd5dee1de1e9a637da2c05a3fa74284e477e8f3
 * 담을 수 있는 트랜잭션 개수 : 그때 그때 다름 https://etherscan.io/block/5520289
 * 어떤 기준으로 트랜잭션을 담는가 : 수수료를 많이 받는 방향으로
 ![block_gas_limit](./img/block_gas_limit.png)
-- **거래#1에서 최소 값을 21,000 -> 84,000으로 변경해야 됨**
 
 # 한 눈에 보는 이더리움 구조
 ![ethereum_big_picture](https://github.com/4c656554/BlockchainIllustrations/blob/master/Ethereum/EthBlockchain5.png?raw=true)
