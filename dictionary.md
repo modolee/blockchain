@@ -9,6 +9,9 @@
 - [ ] 체인의 종류
   - [ ] 온 체인 (On-chain)
   - [ ] 오프 체인 (Off-chain)
+    * 참고 자료
+      * http://rtwire.com/blog/2015/1/21/off-chain-transactions
+      * https://en.bitcoin.it/wiki/Off-Chain_Transactions
   - [ ] 사이드 체인 (Side-chain)
   - [ ] 차일드 체인 (Child-chain)
   - [ ] 인터 체인 (Inter chain)
