@@ -17,6 +17,12 @@
     * http://rtwire.com/blog/2015/1/21/off-chain-transactions
     * https://en.bitcoin.it/wiki/Off-Chain_Transactions
     * https://blog.stephantual.com/what-are-state-channels-32a81f7accab
+    * https://themerkle.com/what-is-an-off-chain-bitcoin-transaction/
+    * https://www.8wilson.com/blog/2018/1/12/on-chain-vs-off-chain
+    * https://medium.com/@liquidity.network/understanding-off-chain-transactions-in-blockchain-for-fun-and-profit-591e7e27ccc0
+    * https://energyweb.atlassian.net/wiki/spaces/EWF/pages/17760291/On-Chain+vs+Off-Chain
+    * https://bitcoin.stackexchange.com/questions/63375/what-is-the-difference-between-on-chain-scaling-and-off-chain-scaling
+    * https://coinjournal.net/on-chain-vs-off-chain-governance-the-ins-and-outs/
 - [ ] 오프 체인 트랜잭션 관련
   - [ ] 사이드 체인 (Side-chain)
   - [ ] 차일드 체인 (Child-chain)
