@@ -12,7 +12,7 @@
   - [ ] 온 체인 트랜잭션 (On-chain Transaction)
     * 단일(메인) 블록체인 네트워크 내에서 발생하는 트랜잭션
   - [ ] 오프 체인 트랜잭션 (Off-chain Transaction)
-    * 메인 블록체인이 아닌 곳 (사이드 체인, 차일드 체인과 같은 메인 블록체인의 하위 블록체인 네트워크 일 수도 있고, 아예 블록체인이 아닌 네트워크 일수도 있다.) -> 현재 확인 중
+    * 메인 블록체인이 아닌 곳 (사이드 체인, 차일드 체인과 같은 메인 블록체인의 하위 블록체인 네트워크 일 수도 있고, 아예 블록체인이 아닌 네트워크 일수도 있다.)에서 발생하는 트랜잭션
   * 참고 자료
     * http://rtwire.com/blog/2015/1/21/off-chain-transactions
     * https://en.bitcoin.it/wiki/Off-Chain_Transactions
@@ -23,10 +23,15 @@
     * https://energyweb.atlassian.net/wiki/spaces/EWF/pages/17760291/On-Chain+vs+Off-Chain
     * https://bitcoin.stackexchange.com/questions/63375/what-is-the-difference-between-on-chain-scaling-and-off-chain-scaling
     * https://coinjournal.net/on-chain-vs-off-chain-governance-the-ins-and-outs/
-- [ ] 오프 체인 트랜잭션 관련
-  - [ ] 사이드 체인 (Side-chain)
-  - [ ] 차일드 체인 (Child-chain)
-
+- [ ] 오프 체인 트랜잭션 처리 방법
+  - [ ] Payment Channels
+  - [ ] Sidechains
+  - [ ] Credit-Based Solutions
+  - [ ] Trusted Third Parties
+  - [ ] Auditing
+  - [ ] Proving Fraud
+  
+- [ ] 차일드 체인 (Child-chain)
 - [ ] 체인 상호 운영성(Chain Interoperability)
   * [Chain Interoperability](https://static1.squarespace.com/static/55f73743e4b051cfcc0b02cf/t/5886800ecd0f68de303349b1/1485209617040/Chain+Interoperability.pdf) - Vitalik Buterin
 
