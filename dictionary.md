@@ -8,15 +8,21 @@
   - [ ] 플라즈마 (Plasma)
   - [ ] 샤딩 (Sharding)
 
-- [ ] 체인의 종류
-  - [ ] 온 체인 (On-chain)
-  - [ ] 오프 체인 (Off-chain)
-    * 참고 자료
-      * http://rtwire.com/blog/2015/1/21/off-chain-transactions
-      * https://en.bitcoin.it/wiki/Off-Chain_Transactions
+- [ ] 트랜잭션의 종류
+  - [ ] 온 체인 트랜잭션 (On-chain Transaction)
+    * 단일(메인) 블록체인 네트워크 내에서 발생하는 트랜잭션
+  - [ ] 오프 체인 트랜잭션 (Off-chain Transaction)
+    * 메인 블록체인이 아닌 곳 (사이드 체인, 차일드 체인과 같은 메인 블록체인의 하위 블록체인 네트워크 일 수도 있고, 아예 블록체인이 아닌 네트워크 일수도 있다.) -> 현재 확인 중
+  * 참고 자료
+    * http://rtwire.com/blog/2015/1/21/off-chain-transactions
+    * https://en.bitcoin.it/wiki/Off-Chain_Transactions
+    * https://blog.stephantual.com/what-are-state-channels-32a81f7accab
+- [ ] 오프 체인 트랜잭션 관련
   - [ ] 사이드 체인 (Side-chain)
   - [ ] 차일드 체인 (Child-chain)
-  - [ ] 인터 체인 (Inter chain)
+
+- [ ] 체인 상호 운영성(Chain Interoperability)
+  * [Chain Interoperability](https://static1.squarespace.com/static/55f73743e4b051cfcc0b02cf/t/5886800ecd0f68de303349b1/1485209617040/Chain+Interoperability.pdf) - Vitalik Buterin
 
 - [ ] 포크 (Fork)
   - [ ] 우연한 포크 (Accidental fork)
