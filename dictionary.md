@@ -13,9 +13,9 @@
     * 단일(메인) 블록체인 네트워크 내에서 발생하는 트랜잭션
   - [ ] 오프 체인 트랜잭션 (Off-chain Transaction)
     * 메인 블록체인이 아닌 곳 (사이드 체인, 차일드 체인과 같은 메인 블록체인의 하위 블록체인 네트워크 일 수도 있고, 아예 블록체인이 아닌 네트워크 일수도 있다.)에서 발생하는 트랜잭션
+    * [Off-Chain Transaction](https://en.bitcoin.it/wiki/Off-Chain_Transactions) - 비트코인 위키
   * 참고 자료
     * http://rtwire.com/blog/2015/1/21/off-chain-transactions
-    * https://en.bitcoin.it/wiki/Off-Chain_Transactions
     * https://blog.stephantual.com/what-are-state-channels-32a81f7accab
     * https://themerkle.com/what-is-an-off-chain-bitcoin-transaction/
     * https://www.8wilson.com/blog/2018/1/12/on-chain-vs-off-chain
