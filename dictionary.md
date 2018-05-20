@@ -1,11 +1,11 @@
 # 블록체인 용어 정리
 
 - [ ] 확장성 문제 해결책
-  - [ ] 라이트닝 네트워크 (Lightning Network)
-  - [ ] 라이덴 네트워크 (Raiden Network)
+  - [ ] [라이트닝 네트워크 (Lightning Network)](https://lightning.network/)
+  - [ ] [라이덴 네트워크 (Raiden Network)](https://raiden.network/)
     * [Raiden Network in a Nutshell](https://youtu.be/R1tIy1XgdPw)
     * [Raiden Network - Basic Mechanics](https://youtu.be/1wAbCnD-M_I)
-  - [ ] 플라즈마 (Plasma)
+  - [ ] [플라즈마 (Plasma)](http://plasma.io/)
   - [ ] 샤딩 (Sharding)
 
 - [ ] 트랜잭션의 종류
