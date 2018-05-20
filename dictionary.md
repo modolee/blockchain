@@ -27,9 +27,9 @@
   - [ ] Payment Channels
   - [ ] Sidechains
   - [ ] Credit-Based Solutions
-  - [ ] Trusted Third Parties
-  - [ ] Auditing
-  - [ ] Proving Fraud
+    - [ ] Trusted Third Parties
+    - [ ] Auditing
+    - [ ] Proving Fraud
   
 - [ ] 차일드 체인 (Child-chain)
 - [ ] 체인 상호 운영성(Chain Interoperability)
