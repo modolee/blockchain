@@ -3,6 +3,8 @@
 - [ ] 확장성 문제 해결책
   - [ ] 라이트닝 네트워크 (Lightning Network)
   - [ ] 라이덴 네트워크 (Raiden Network)
+    * [Raiden Network in a Nutshell](https://youtu.be/R1tIy1XgdPw)
+    * [Raiden Network - Basic Mechanics](https://youtu.be/1wAbCnD-M_I)
   - [ ] 플라즈마 (Plasma)
   - [ ] 샤딩 (Sharding)
 
