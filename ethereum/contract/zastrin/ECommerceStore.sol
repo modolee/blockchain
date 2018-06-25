@@ -108,7 +108,7 @@ contract EcommerceStore {
     )
         public
     {
-        productIndex.add(1);
+        productIndex = productIndex.add(1);
         require(_auctionStartTime < _auctionEndTime);
         Product memory product = Product(
             productIndex,
