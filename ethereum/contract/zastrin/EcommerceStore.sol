@@ -78,6 +78,14 @@ contract EcommerceStore {
         uint totalBids;
         ProductStatus status;
         ProductCondition condition;
+        mapping (address => mapping (bytes32 => Bid)) bids;
+    }
+    
+    struct Bid {
+        address bidder;
+        uint productId;
+        uint value;
+        bool revealed;
     }
     
     /// @notice constructor for EcommerceStore contract
@@ -145,7 +153,8 @@ contract EcommerceStore {
         ProductCondition
     )
     {
-        Product memory product = stores[productIdInStore[_productId]][_productId];
+        Product memory product 
+            = stores[productIdInStore[_productId]][_productId];
         
         return (
             product.id,
@@ -159,5 +168,25 @@ contract EcommerceStore {
             product.status,
             product.condition
         );
+    }
+    
+    /// @notice Join to bid with productId and encrypted string
+    /// @param _productId Product ID
+    /// @param _bid encrypted string (bid price + secret string)
+    function bid(uint _productId, bytes32 _bid) 
+        payable 
+        public 
+        returns (bool) 
+    {
+        Product storage product 
+            = stores[productIdInStore[_productId]][_productId];
+        require(now >= product.auctionStartTime);
+        require(now <= product.auctionEndTime);
+        require(msg.value > product.startPrice);
+        require(product.bids[msg.sender][_bid].bidder == 0);
+        product.bids[msg.sender][_bid] 
+            = Bid(msg.sender, _productId, msg.value, false);
+        product.totalBids = product.totalBids.add(1);
+        return true;
     }
 }
