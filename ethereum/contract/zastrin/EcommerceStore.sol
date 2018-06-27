@@ -189,4 +189,92 @@ contract EcommerceStore {
         product.totalBids = product.totalBids.add(1);
         return true;
     }
+    
+    /// @notice Reveal bid price
+    /// @param _productId product ID
+    /// @param _amount bid price
+    /// @param _secret secret string that used bidding
+    function revealBid(uint _productId, string _amount, string _secret)
+        public
+    {
+        Product storage product 
+            = stores[productIdInStore[_productId]][_productId];
+        require(now > product.auctionEndTime);
+        bytes32 sealedBid = keccak256(abi.encodePacked(_amount, _secret));
+        
+        Bid memory bidInfo = product.bids[msg.sender][sealedBid];
+        require(bidInfo.bidder > 0);
+        require(bidInfo.revealed == false);
+        
+        uint refund;
+        
+        uint amount = stringToUint(_amount);
+        
+        if(bidInfo.value < amount) {
+            refund = bidInfo.value;
+        } else {
+            if (address(product.highestBidder) == 0) {
+                product.highestBidder = msg.sender;
+                product.highestBid = amount;
+                product.secondHighestBid = product.startPrice;
+                refund = bidInfo.value.sub(amount);
+            } else {
+                if (amount > product.highestBid) {
+                    product.secondHighestBid = product.highestBid;
+                    product.highestBidder.transfer(product.highestBid);
+                    product.highestBidder = msg.sender;
+                    product.highestBid = amount;
+                    refund = bidInfo.value.sub(amount);
+                } else if (amount > product.secondHighestBid) {
+                    product.secondHighestBid = amount;
+                    refund = amount;
+                } else  {
+                    refund = amount;
+                }
+            }
+        }
+        
+        product.bids[msg.sender][sealedBid].revealed = true;
+        
+        if (refund > 0) {
+            msg.sender.transfer(refund);
+        }
+    }
+    
+    /// @notice Get highest bidder information
+    /// param _productId Product ID
+    function highestBidderInfo(uint _productId)
+        view
+        public
+        returns (address, uint, uint)
+    {
+        Product memory product 
+            = stores[productIdInStore[_productId]][_productId];
+        return (
+            product.highestBidder,
+            product.highestBid,
+            product.secondHighestBid
+        );
+    }
+    
+    /// @notice Get total bids count
+    /// @param _productId Product ID
+    function totalBids(uint _productId) view public returns (uint) {
+        Product memory product
+            = stores[productIdInStore[_productId]][_productId];
+        return product.totalBids;
+    }
+    
+    /// @notice Convert string to uint
+    /// param s string which want to convert to uint
+    function stringToUint(string s) pure private returns (uint) {
+        bytes memory b = bytes(s);
+        uint result = 0;
+        for (uint i = 0; i < b.length; i++) {
+            if(b[i] >= 48 && b[i] <= 57) {
+                result = result * 10 + (uint(b[i]) - 48);
+            }
+        }
+        return result;
+    }
 }
